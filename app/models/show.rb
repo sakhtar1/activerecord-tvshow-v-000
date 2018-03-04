@@ -25,7 +25,7 @@ class Show < ActiveRecord::Base
   end
 
   def self.shows_by_alphabetical_order
-    Song.order(shows: :asc)
+    Song.order(name: :asc)
   end
 
 end
