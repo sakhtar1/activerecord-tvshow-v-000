@@ -21,7 +21,11 @@ class Show < ActiveRecord::Base
   end
 
   def self.popular_shows
-    Song.where("rating > 5")
+    Song.where("rating > 5").order(rating: :asc)
+  end
+
+  def self.shows_by_alphabetical_order
+    Song.order(shows: :asc)
   end
 
 end
