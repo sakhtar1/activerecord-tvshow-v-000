@@ -13,7 +13,7 @@ class Show < ActiveRecord::Base
   end
 
   def self.least_popular_show
-    Show.where(:name).minimum(:rating)
+    #Show.where(:name).minimum(:rating)
   end
 
   def self.ratings_sum
